@@ -1,0 +1,30 @@
+while (errorsMade < 6)
+	{
+		refresher(boardState[7], errorsMade, blankSpaces[11], chosenWordLength);
+
+		cout << "Guess a letter.";
+		// player guesses letter
+		cin >> guessedLetter;
+		// loop for actual game mechanic
+		for (int i = 0; i <= chosenWordLength; i++)
+		{
+			if (chosenWord[i] == ' ')
+				spacesInWord = true;
+		}
+			else
+				break;
+		for (int i = 0; i <= chosenWordLength; i++)
+		{
+			if (spacesInWord = false)
+				break;
+			if (chosenWord[i] == guessedLetter)
+			{
+				positionInGuessedLetter = i;
+				inWord = true;
+			}
+			else if (chosenWord[i] != guessedLetter)
+			{
+				errorsMade++;
+			}
+		}
+	}
